@@ -1,9 +1,5 @@
 @import "./reset.css";
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
 @import "./fonts/Gilroy/stylesheet.css";
-
-/* font-family: 'Work Sans', sans-serif; */
-/* font-family: 'Gilroy', sans-serif; */
 
 body {
   font-family: "Gilroy", sans-serif;
@@ -18,8 +14,11 @@ body {
 
 /* BUTTON */
 .btn {
+  position: relative;
+
   display: inline-block;
   padding: 10px 24px;
+  padding-right: 72px;
 
   border: 1px solid #114455;
   border-radius: 2px;
@@ -27,7 +26,59 @@ body {
   font-size: 20px;
   font-weight: 800;
   color: #114455;
+
+  transition: color .15s ease-in, background-color .15s ease-in;
 }
+
+.btn::after {
+  position: absolute;
+
+  content: "";
+  width: 32px;
+  height: 32px;
+
+  background-image: url(./../img/icons/arrow-right-black.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+
+
+}
+
+.btn:hover, .btn:focus {
+  background-color: #114455;
+  color: #fff;
+}
+
+.btn:active {
+  top: 1px;
+}
+
+.btn:hover::after {
+  background-image: url("./../img/icons/arrow-right-white.svg");
+}
+
+.btn__big {
+  padding: 14px 32px;
+  padding-right: 80px;
+}
+
+.btn--dark {
+  background-color: #114455;
+  color: #fff;
+}
+
+.btn--dark:hover, .btn--dark:focus {
+  background-color: #000;
+}
+
+.btn--dark::after {
+  background-image: url("./../img/icons/arrow-right-white.svg");
+}
+
 
 /* HEADER */
 
@@ -40,8 +91,12 @@ body {
 }
 
 .header__top {
+  margin-bottom: 126px;
   padding: 44px 0;
 }
+
+/* NAV */
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -56,4 +111,33 @@ body {
   font-size: 20px;
   font-weight: 800;
   color: #114455;
+}
+
+/* HEADER CONTENT */
+
+.header__content {
+  max-width: 1060px;
+}
+.header__title {
+  max-width: 734px;
+  margin-bottom: 48px;
+
+  font-weight: 800;
+  font-size: 80px;
+  color: #114455;
+}
+.header__text {
+  margin-bottom: 72px;
+
+  font-weight: 400;
+  font-size: 34px;
+  letter-spacing: -0.02em;
+  color: rgba(31, 31, 31, 0.7);
+}
+
+.header__text p + p {
+  margin-top: 1em;
+}
+
+.header__btn {
 }
