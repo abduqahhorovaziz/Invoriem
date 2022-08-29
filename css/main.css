@@ -1,9 +1,15 @@
 @import "./reset.css";
 @import "./fonts/Gilroy/stylesheet.css";
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
+  color: rgba(31, 31, 31, 0.7);
 }
 
 .container {
@@ -90,6 +96,7 @@ body {
 /* HEADER */
 
 .header {
+  position: relative;
   min-height: 100vh;
   background-color: #b4ceda;
   background-image: url("./../img/header/header-bg.jpg");
@@ -100,6 +107,13 @@ body {
 .header__top {
   margin-bottom: 126px;
   padding: 44px 0;
+}
+
+.header__arrows {
+  position: absolute;
+  bottom: 59px;
+  left: 50%;
+  transform: translateX(-50%)
 }
 
 /* NAV */
@@ -115,6 +129,10 @@ body {
   column-gap: 118px;
 }
 
+.nav__btn {
+  display: none;
+}
+
 .link {
   font-size: 20px;
   font-weight: 800;
@@ -125,6 +143,10 @@ body {
 
 .header__content {
   max-width: 1060px;
+}
+
+.header__content-mobile{
+  display: none;
 }
 
 .header__title {
@@ -141,11 +163,12 @@ body {
 
   font-weight: 400;
   font-size: 34px;
+  line-height: 1.57;
   letter-spacing: -0.02em;
   color: rgba(31, 31, 31, 0.7);
 }
 
-.header__text p+p {
+.header__text p + p {
   margin-top: 1em;
 }
 
@@ -199,15 +222,15 @@ body {
   font-size: 140px;
   font-weight: 800;
 
-  background: linear-gradient(90deg,
-      rgba(17, 68, 85, 1) 80px,
-      rgba(255, 255, 255, 1) 80px);
+  background: linear-gradient(
+    90deg,
+    rgba(17, 68, 85, 1) 80px,
+    rgba(255, 255, 255, 1) 80px
+  );
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
-
 
 /* VIDEO SECTION */
 
@@ -225,7 +248,6 @@ body {
   margin-bottom: 78px;
 }
 
-
 /* VIDEO */
 
 .video {
@@ -239,7 +261,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(17, 68, 85, .5);
+  background-color: rgba(17, 68, 85, 0.5);
 }
 
 .video__btn {
@@ -260,4 +282,37 @@ body {
 .video__object {
   width: 100%;
   vertical-align: top;
+}
+
+/* FOOTER*/
+.footer {
+  padding: 162px 0 82px;
+
+  letter-spacing: 0.04em;
+  font-size: 20px;
+  line-height: 36px;
+  color: rgba(31, 31, 31, 0.7);
+}
+
+.footer a {
+  letter-spacing: 0.04em;
+  font-size: 20px;
+  line-height: 36px;
+  color: rgba(31, 31, 31, 0.7);
+}
+
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__nav {
+  display: flex;
+  column-gap: 104px;
+}
+
+.footer__socials {
+  display: flex;
+  column-gap: 26px;
 }
