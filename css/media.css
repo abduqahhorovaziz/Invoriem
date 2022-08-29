@@ -14,6 +14,55 @@
   .nav__list {
     column-gap: 60px;
   }
+
+  .slider {
+    width: 1300px;
+  }
+
+  .slide {
+    padding-left: 50px;
+  }
+
+  .slide__img {
+    width: 336px;
+    height: 396px;
+  }
+
+  .slide__title {
+    bottom: 32px;
+    font-size: 80px;
+    background: linear-gradient(
+      90deg,
+      rgba(17, 68, 85, 1) 50px,
+      rgba(255, 255, 255, 1) 50px
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .title {
+    font-size: 60px;
+  }
+
+  .text {
+    font-size: 22px;
+  }
+
+  .case-studies {
+    padding: 80px 0;
+  }
+
+  .case-studies__text {
+    margin-bottom: 50px;
+  }
+
+  .about {
+    padding: 80px 0;
+  }
+
+  .about__text {
+    margin-bottom: 50px;
+  }
 }
 
 /* MOBILE */
@@ -63,5 +112,88 @@
     width: 19px;
     height: 16px;
     bottom: 32px;
+  }
+
+  .case-studies {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  .case-studies__title {
+    margin-bottom: 7px;
+  }
+
+  .case-studies__text {
+    margin-bottom: 31px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .slider {
+    width: 546px;
+  }
+
+  .slide {
+    padding-left: 33px;
+  }
+
+  .slide__img {
+    width: 224px;
+    height: 264px;
+  }
+
+  .slide__title {
+    bottom: 22px;
+    font-size: 60px;
+    background: linear-gradient(
+      90deg,
+      rgba(17, 68, 85, 1) 33px,
+      rgba(255, 255, 255, 1) 33px
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .about {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+
+  .about__title{
+    margin-bottom: 7px;
+  }
+
+  .about__text {
+    max-width: 291px;
+    margin-bottom: 40px;
+  }
+
+  .video {
+    overflow: hidden;
+  }
+
+  .video__btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .video__picture, .video__picture img {
+    width: 100%;
+  }
+
+  .video__object {
+    position: absolute;
+    left: -50%;
+    top: 0;
+    width: 900px;
+    height: 459px;
+    vertical-align: top;
   }
 }

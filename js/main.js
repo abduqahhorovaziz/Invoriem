@@ -1,8 +1,21 @@
 $(document).ready(function () {
     $(".owl-carousel").owlCarousel({
-        dots: false,
-        margin: 48,
         loop: true,
+        dots: false,
+        responsive: {
+            0: {
+                items: 2,
+                margin: 32,
+            },
+            601: {
+                items: 3,
+                margin: 32,
+            },
+            1001: {
+                items: 3,
+                margin: 48,
+            }
+        }
     });
 });
 
@@ -17,7 +30,7 @@ const video = document.querySelector('#video-file');
 videoWrapper.addEventListener('click', function () {
 
     if (video.paused) {
-        videoPicture.classList.add('none');
+        videoPicture.classList.add('hidden');
         videoWrapper.classList.remove('video-overlay');
         videoBtn.classList.add('none');
         video.play()

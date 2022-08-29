@@ -1,7 +1,6 @@
 @import "./reset.css";
 @import "./fonts/Gilroy/stylesheet.css";
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -19,11 +18,22 @@ body {
 }
 
 .container-right {
+  overflow-x: hidden;
   padding-left: calc((100% - 1750px) / 2 + 15px);
+}
+
+@media (max-width: 1749px) {
+  .container-right {
+    padding-left: 15px;
+  }
 }
 
 .none {
   display: none;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 /* BUTTON */
@@ -113,7 +123,7 @@ body {
   position: absolute;
   bottom: 59px;
   left: 50%;
-  transform: translateX(-50%)
+  transform: translateX(-50%);
 }
 
 /* NAV */
@@ -145,7 +155,7 @@ body {
   max-width: 1060px;
 }
 
-.header__content-mobile{
+.header__content-mobile {
   display: none;
 }
 
@@ -259,6 +269,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 8;
+
   width: 100%;
   height: 100%;
   background-color: rgba(17, 68, 85, 0.5);
@@ -273,14 +285,19 @@ body {
 }
 
 .video__picture {
-  position: absolute;
-  left: 0;
-  top: 0;
+  position:relative;
+  z-index: 7;
   /* display: none; */
+
 }
 
 .video__object {
+  position: absolute;
+  top: 0;
+  left: 0;
+
   width: 100%;
+  height: 100%;
   vertical-align: top;
 }
 
