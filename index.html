@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <header class="header none">
+    <header class="header">
         <div class="container">
             <div class="header__top">
                 <nav class="nav">
@@ -30,7 +30,7 @@
                         <li><a href="#!" class="btn">Let's Talk</a></li>
                     </ul>
 
-                    <button class="nav__btn">
+                    <button class="nav__btn" id="openMobileNav">
                         <img src="./img/icons/mobile-navbar.svg" alt="MOBILE NAV">
                     </button>
 
@@ -134,7 +134,7 @@
             </div>
         </section>
 
-        <footer class="footer none">
+        <footer class="footer">
             <div class="container">
                 <div class="footer__row">
                     <div class="footer__copyright">Copyright © 2020 Invoriem</div>
@@ -158,6 +158,50 @@
                 </div>
             </div>
         </footer>
+
+        <section class="mobile-nav none" id="mobileNav">
+            <div class="mobile-nav__header">
+                <a href="#">
+                    <img class="mobile-nav__logo" src="./img/logo.svg" alt="Mobile Navigation Logo">
+                </a>
+                <button class="mobile-nav__btn" id="closeMobileNav">
+                    <img src="./img/icons/mobile-navbar.svg" alt="Burger Menu icon">
+                </button>
+            </div>
+
+            <nav class="mobile-list">
+                <ul>
+                    <li><a href="#!">Hello</a></li>
+                    <li><a href="#!">Bonjour</a></li>
+                    <li><a href="#!">Olá</a></li>
+                    <li><a href="#!">Marhabaan</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-contacts">
+                <h4 class="mobile-contacts__title">Contact us</h4>
+                <a href="mailto:info@invoriem.com" class="mobile-contacts__email">info@invoriem.com</a>
+                <a href="tel:+55512345258" class="mobile-contacts__phone">+555 1234 52 58</a>
+                <address class="mobile-contacts__address">
+                    3517 W. Gray St. <br>
+                    Utica, Pennsylvania <br>
+                    57867
+                </address>
+            </div>
+
+            <div class="mobile-footer">
+                <a href="mailto:info@invoriem.com" class="mobile-footer__email">info@invoriem.com</a>
+
+                <div class="mobile-socials">
+                    <a href="#!"><img src="./img/footer/instagram.svg" alt="icon"></a>
+                    <a href="#!"><img src="./img/footer/facebook.svg" alt="icon"></a>
+                    <a href="#!"><img src="./img/footer/twitter.svg" alt="icon"></a>
+                    <a href="#!"><img src="./img/footer/linkedIn.svg" alt="icon"></a>
+                </div>
+
+                <p class="mobile-footer__copyright">Copyright © 2020 Invoriem</p>
+            </div>
+        </section>
     </main>
 </body>
 

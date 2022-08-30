@@ -39,4 +39,19 @@ videoWrapper.addEventListener('click', function () {
         videoBtn.classList.remove('none');
         videoWrapper.classList.add('video-overlay');
     }
-})
+});
+
+// Mobile Nav
+
+const openNavBtn = document.querySelector('#openMobileNav');
+const closeNavBtn = document.querySelector('#closeMobileNav');
+const mobileNav = document.querySelector('#mobileNav');
+
+openNavBtn.onclick = function () {
+    mobileNav.classList.remove('none');
+    document.body.classList.add('no-scroll')
+}
+
+closeNavBtn.onclick = function () {
+    mobileNav.classList.add('none');
+}
